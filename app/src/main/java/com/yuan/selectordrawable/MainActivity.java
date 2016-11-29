@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button button1 = (Button) findViewById(R.id.button1);
-        Drawable drawable1 = SelectorFactory.create(new SelectorShape.SelectorBuilder().normalColor(Color.RED).pressColor(Color.GREEN).shapeBuilder(new Shape.ShapeBuilder().corner(30)).build());
+        Drawable drawable1 = SelectorFactory.create(new SelectorShape.SelectorBuilder().normalColor(Color.RED).pressColor(Color.GREEN).disableColor(Color.BLUE).shapeBuilder(new Shape.ShapeBuilder().corner(30)).build());
         button1.setBackground(drawable1);
 
         Button button2 = (Button) findViewById(R.id.button2);

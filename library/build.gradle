@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 25
@@ -19,6 +20,30 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    lintOptions {
+        abortOnError false
+    }
+
+
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.4.0'
+    }
+}
+
+publish {
+    userOrg = 'yuanwenbing'
+    groupId = 'com.yuan.library.selector'
+    artifactId = 'selectordrawable-release'
+    publishVersion = '1.0'
+    desc = 'set the button selector not via selector.xml'
+    website = 'https://github.com/yuanwenbing/SelectorDrawable'
 }
 
 dependencies {

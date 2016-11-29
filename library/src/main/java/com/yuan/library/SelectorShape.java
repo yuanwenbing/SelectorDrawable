@@ -15,11 +15,14 @@ public class SelectorShape extends SelectorDrawable{
 
     private int mPressedColor;
 
+    private int mDisableColor;
+
     private Shape.ShapeBuilder mSingleBuilder;
 
     private SelectorShape(SelectorBuilder builder) {
         this.mNormalColor = builder.normalColor;
         this.mPressedColor = builder.pressedColor;
+        this.mDisableColor = builder.disableColor;
         this.mSingleBuilder = builder.shapeBuilder;
     }
 
@@ -39,11 +42,21 @@ public class SelectorShape extends SelectorDrawable{
         return mSingleBuilder.build().createGradientDrawable(mPressedColor);
     }
 
+    @Override
+    public Drawable getDisableDrawable() {
+        if (mSingleBuilder == null) {
+            mSingleBuilder = new Shape.ShapeBuilder();
+        }
+        return mSingleBuilder.build().createGradientDrawable(mDisableColor);
+    }
+
     public static class SelectorBuilder {
 
         int normalColor = Color.BLUE;
 
         int pressedColor = Color.GRAY;
+
+        int disableColor = Color.DKGRAY;
 
         Shape.ShapeBuilder shapeBuilder;
 
@@ -62,11 +75,18 @@ public class SelectorShape extends SelectorDrawable{
             return this;
         }
 
+        public SelectorBuilder disableColor(@ColorInt int disableColor) {
+            this.disableColor = disableColor;
+            return this;
+        }
+
 
         public SelectorBuilder shapeBuilder(Shape.ShapeBuilder shapeBuilder) {
             this.shapeBuilder = shapeBuilder;
             return this;
         }
+
+
 
         public SelectorShape build() {
             return new SelectorShape(this);
