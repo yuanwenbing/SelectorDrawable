@@ -1,4 +1,4 @@
-package com.yuan.library;
+package com.yuan.library.selector;
 
 import android.graphics.drawable.Drawable;
 

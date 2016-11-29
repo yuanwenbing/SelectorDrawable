@@ -1,11 +1,8 @@
-package com.yuan.library;
+package com.yuan.library.selector;
 
-import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.support.annotation.ColorInt;
-import android.util.DisplayMetrics;
-import android.util.TypedValue;
 
 /**
  * Created by yuan on 25/11/2016.

@@ -1,7 +1,6 @@
-package com.yuan.library;
+package com.yuan.library.selector;
 
 import android.graphics.drawable.StateListDrawable;
-import android.icu.util.IslamicCalendar;
 
 /**
  * Created by yuan on 25/11/2016.

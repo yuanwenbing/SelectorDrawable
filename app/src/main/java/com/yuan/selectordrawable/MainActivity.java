@@ -1,23 +1,19 @@
 package com.yuan.selectordrawable;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.yuan.library.SelectorDrawable;
-import com.yuan.library.SelectorFactory;
-import com.yuan.library.SelectorShape;
-import com.yuan.library.Shape;
+import com.yuan.library.selector.SelectorDrawable;
+import com.yuan.library.selector.SelectorFactory;
+import com.yuan.library.selector.SelectorShape;
+import com.yuan.library.selector.Shape;
 
 public class MainActivity extends AppCompatActivity {
 
