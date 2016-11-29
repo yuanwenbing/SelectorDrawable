@@ -18,7 +18,7 @@ public class SelectorDrawable implements ISelector{
 
     }
 
-    SelectorDrawable(SelectorBuilder builder) {
+    private SelectorDrawable(SelectorBuilder builder) {
         this.mNormalDrawable = builder.normalDrawable;
         this.mPressedDrawable = builder.pressDrawable;
         this.mDisableDrawable = builder.disableDrawable;

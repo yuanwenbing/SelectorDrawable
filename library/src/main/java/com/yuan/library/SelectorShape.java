@@ -17,48 +17,39 @@ public class SelectorShape extends SelectorDrawable{
 
     private int mDisableColor;
 
-    private Shape.ShapeBuilder mSingleBuilder;
+    private Shape.ShapeBuilder mShapeBuilder;
 
     private SelectorShape(SelectorBuilder builder) {
         this.mNormalColor = builder.normalColor;
         this.mPressedColor = builder.pressedColor;
         this.mDisableColor = builder.disableColor;
-        this.mSingleBuilder = builder.shapeBuilder;
+        this.mShapeBuilder = builder.shapeBuilder;
     }
 
     @Override
     public Drawable getNormalDrawable() {
-        if (mSingleBuilder == null) {
-            mSingleBuilder = new Shape.ShapeBuilder();
-        }
-        return mSingleBuilder.build().createGradientDrawable(mNormalColor);
+        return mShapeBuilder.build().createGradientDrawable(mNormalColor);
     }
 
     @Override
     public Drawable getPressedDrawable() {
-        if (mSingleBuilder == null) {
-            mSingleBuilder = new Shape.ShapeBuilder();
-        }
-        return mSingleBuilder.build().createGradientDrawable(mPressedColor);
+        return mShapeBuilder.build().createGradientDrawable(mPressedColor);
     }
 
     @Override
     public Drawable getDisableDrawable() {
-        if (mSingleBuilder == null) {
-            mSingleBuilder = new Shape.ShapeBuilder();
-        }
-        return mSingleBuilder.build().createGradientDrawable(mDisableColor);
+        return mShapeBuilder.build().createGradientDrawable(mDisableColor);
     }
 
     public static class SelectorBuilder {
 
-        int normalColor = Color.BLUE;
+        private int normalColor = Color.BLUE;
 
-        int pressedColor = Color.GRAY;
+        private int pressedColor = Color.GRAY;
 
-        int disableColor = Color.DKGRAY;
+        private int disableColor = Color.DKGRAY;
 
-        Shape.ShapeBuilder shapeBuilder;
+        private Shape.ShapeBuilder shapeBuilder = new Shape.ShapeBuilder();
 
 
         public SelectorBuilder normalColor(@ColorInt int normalColor) {

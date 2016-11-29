@@ -9,6 +9,8 @@ import android.util.TypedValue;
 
 /**
  * Created by yuan on 25/11/2016.
+ * <p>
+ * Shape
  */
 
 public class Shape {
@@ -27,7 +29,7 @@ public class Shape {
 
     private int mRightBottomCorner;
 
-    Shape(ShapeBuilder builder) {
+    private Shape(ShapeBuilder builder) {
         mCorner = builder.corner;
         mStrokeColor = builder.strokeColor;
         mStrokeWidth = builder.strokeWidth;
@@ -50,15 +52,11 @@ public class Shape {
 
     public static class ShapeBuilder {
 
-        DisplayMetrics displayMetrics;
-
         private int corner = 0;
 
         private int strokeColor = Color.TRANSPARENT;
 
         private int strokeWidth = 0;
-
-        private int unit;
 
         private int leftTopCorner;
 
@@ -67,8 +65,6 @@ public class Shape {
         private int leftBottomCorner;
 
         private int rightBottomCorner;
-
-
 
         public ShapeBuilder corner(int corner) {
             this.corner = corner;
