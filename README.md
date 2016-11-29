@@ -1,17 +1,20 @@
 # SelectorDrawable
 	主要用来为按钮设置selector,正常使用xml，不够灵活，而且代码量大，使用起来比较麻烦，定义这个类，使用Builder模式，使用起来比较灵活，不需要太多的代码。
+# Captures
+![][image-1]
+
 # Use
 
 ## Gradle:
-compile 'com.yuan.library.selector:selectordrawable-release:1.0.1'
+	compile 'com.yuan.library.selector:selectordrawable-release:1.0.1'
 
 ## Maven
-<dependency>
-  <groupId>com.yuan.library.selector</groupId>
-  <artifactId>selectordrawable-release</artifactId>
-  <version>1.0.1</version>
-  <type>pom</type>
-</dependency>
+	<dependency>
+	  <groupId>com.yuan.library.selector</groupId>
+	  <artifactId>selectordrawable-release</artifactId>
+	  <version>1.0.1</version>
+	  <type>pom</type>
+	</dependency>
 
 
 # Example
@@ -32,3 +35,10 @@ compile 'com.yuan.library.selector:selectordrawable-release:1.0.1'
 	        TextView textView = (TextView) findViewById(R.id.textView);
 	        Drawable drawable4 = SelectorFactory.create(new SelectorShape.SelectorBuilder().normalColor(Color.RED).pressColor(Color.GREEN).shapeBuilder(new Shape.ShapeBuilder().corner(30)).build());
 	        textView.setBackground(drawable4);
+# Me
+## Mail：wenbing007@163.com
+## QQ：11026979
+
+
+
+[image-1]:	https://raw.githubusercontent.com/yuanwenbing/SelectorDrawable/master/captures/2016-11-29%2023_49_02.gif
