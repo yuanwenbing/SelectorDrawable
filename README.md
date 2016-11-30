@@ -12,25 +12,25 @@
 
 ## Maven
 
-```xml
+\`\`\`xml
  <dependency>
    <groupId>com.yuan.library.selector</groupId>
    <artifactId>selectordrawable-release</artifactId>
    <version>1.0.1</version>
    <type>pom</type>
  </dependency>
- ```
+ \`\`\`
 
 
 # Example
 
-```java
+\`\`\`java
 Button button1 = (Button) findViewById(R.id.button1);
 Drawable drawable1 = SelectorFactory.create(newSelectorShape.SelectorBuilder().normalColor(Color.RED).pressColor(Color.GREEN).shapeBuilder(new Shape.ShapeBuilder().corner(30)).build());
 button1.setBackground(drawable1);
 
 Button button2 = (Button) findViewById(R.id.button2);
-Drawable drawable2 = SelectorFactory.create(new SelectorDrawable.SelectorBuilder().normalDrawable(getDrawable(R.mipmap.test_normal)).pressDrawable(getDrawable(R.mipmap.test_press)).build());
+Drawable drawable2 = SelectorFactory.create(new SelectorDrawable.SelectorBuilder().normalDrawable(getDrawable(R.mipmap.test\_normal)).pressDrawable(getDrawable(R.mipmap.test\_press)).build());
 button2.setBackground(drawable2);
 
 Button button3 = (Button) findViewById(R.id.button3);
@@ -40,9 +40,10 @@ button3.setBackground(drawable3);
 TextView textView = (TextView) findViewById(R.id.textView);
 Drawable drawable4 = SelectorFactory.create(new SelectorShape.SelectorBuilder().normalColor(Color.RED).pressColor(Color.GREEN).shapeBuilder(new Shape.ShapeBuilder().corner(30)).build());
 textView.setBackground(drawable4);
-  ```
+  \`\`\`
 
-
+如果非Button控件使用，那么要加上clickable=“true”属性。
+# 
 # About me
 - Mail：[wenbing1007@163.com][1]
 - QQ：11026979
