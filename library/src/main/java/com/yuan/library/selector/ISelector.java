@@ -13,4 +13,6 @@ public interface ISelector {
     Drawable getPressedDrawable();
 
     Drawable getDisableDrawable();
+
+    Drawable getSelectDrawable();
 }

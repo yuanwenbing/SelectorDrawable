@@ -61,4 +61,17 @@
         android:padding="6dp"
         android:text="我是被禁用的"
         android:textColor="@android:color/white"/>
+
+
+    <Button
+        android:id="@+id/button_select_0"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="onClick"
+        android:padding="6dp"
+        android:text="选中状态"
+        android:textColor="@android:color/white"/>
+
+
 </android.support.v7.widget.LinearLayoutCompat>

@@ -14,6 +14,8 @@ public class SelectorDrawable implements ISelector{
 
     private Drawable mDisableDrawable;
 
+    private Drawable mSelectDrawable;
+
     SelectorDrawable() {
 
     }
@@ -22,6 +24,7 @@ public class SelectorDrawable implements ISelector{
         this.mNormalDrawable = builder.normalDrawable;
         this.mPressedDrawable = builder.pressDrawable;
         this.mDisableDrawable = builder.disableDrawable;
+        this.mSelectDrawable = builder.selectDrawable;
     }
 
 
@@ -40,6 +43,10 @@ public class SelectorDrawable implements ISelector{
         return mDisableDrawable;
     }
 
+    @Override
+    public Drawable getSelectDrawable() {
+        return mSelectDrawable;
+    }
 
     public static class SelectorBuilder {
 
@@ -48,6 +55,8 @@ public class SelectorDrawable implements ISelector{
         Drawable pressDrawable;
 
         Drawable disableDrawable;
+
+        Drawable selectDrawable;
 
 
         public SelectorBuilder normalDrawable(Drawable normalDrawable) {
@@ -62,6 +71,11 @@ public class SelectorDrawable implements ISelector{
 
         public SelectorBuilder disableDrawable(Drawable disableDrawable) {
             this.disableDrawable = disableDrawable;
+            return this;
+        }
+
+        public SelectorBuilder selectDrawable(Drawable selectDrawable) {
+            this.selectDrawable = selectDrawable;
             return this;
         }
 

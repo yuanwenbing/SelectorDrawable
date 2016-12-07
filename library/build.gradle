@@ -9,7 +9,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0.2"
+        versionName "1.0.3"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -41,7 +41,7 @@ publish {
     userOrg = 'yuanwenbing'
     groupId = 'com.yuan.library.selector'
     artifactId = 'selectordrawable-release'
-    publishVersion = '1.0.2'
+    publishVersion = '1.0.3'
     desc = 'set the button selector not via selector.xml'
     website = 'https://github.com/yuanwenbing/SelectorDrawable'
 }
