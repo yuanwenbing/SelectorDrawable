@@ -35,7 +35,7 @@
                                         .rightTopCorner() //右上圆角
                                         .rightBottomCorner() // 右下圆角
                                         .strokeColor() // 描边颜色
-                                        .strokeWidth()).build()) // 搭边size
+                                        .strokeWidth()).build()) // 描边size
     // 使用按钮                                    
     SelectorFactory.create(new SelectorDrawable.SelectorBuilder()
                                         .normalDrawable()
